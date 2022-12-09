@@ -1,6 +1,6 @@
 {
     "tabWidth": 4,
-    "useTabs": false,
+    "useTabs": true,
     "semi": false,
     "singleQuote": false,
     "printWidth": 100,
@@ -10,7 +10,7 @@
         "options": {
           "printWidth": 80,
           "tabWidth": 4,
-          "useTabs": false,
+          "useTabs": true,
           "singleQuote": false,
           "bracketSpacing": false,
           "explicitTypes": "always"
