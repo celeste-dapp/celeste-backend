@@ -35,3 +35,40 @@ CelesteTokens which are stored in CelestePosts can also be staked by CelesteUser
 CelestePosts are ERC-721 NFTs which link to JSON on IPFS which stores the image/video, the content of the post, the address of the original owner, comments, likes, and boosts.
 
 The CelestPost contract itself has two CelesteToken balances, available, and earning (locked). Earning funds are not available to be withdrawn as they are staked by the user to earn rewards. Available funds are given to the CelestePost by the CelesteManager.
+
+## Required functions (Pseudocode)
+
+### CelesteManager
+
+```solidity
+function scoreOfPost(postAddress) public view returns(uint256) {
+  engagementData = postAddress.getEngagementData();
+  score = (engagementData.boostCount * boostWeight) + (engagementData.likeCount * likeWeight) + (engagementData.commentCount * commentWeight);
+  updateTotalScore(score);
+  return score;
+}
+
+function getValue(postAddress) public view returns(uint256) {
+  score = scoreOfPost(postAddress);
+  totalScore = getTotalScore();
+  value = (score / totalScore) * this.celesteTokens;
+  return value;
+}
+
+function distributeValue(postAddress) private onlyOwner {
+  value = getValue(postAddress);
+  mint(postAddress,value);
+}
+```
+
+### CelesteToken
+
+```solidity
+
+```
+
+### CelestePost
+
+```solidity
+
+```
