@@ -1,13 +1,24 @@
+const { INITIAL_SUPPLY, INITIAL_FEE, developmentChains } = require("../helper-hardhat-config")
+const { verify } = require("../helper-functions")
+const { ethers } = require("hardhat")
+
 async function main() {
-	const deployer = await ethers.getSigner()
-	console.log("Deploying contracts with the account:", deployer.address)
+	const { deploy, log } = deployments
+	const { deployer } = await getNamedAccounts()
 
-	console.log("Account balance:", (await deployer.getBalance()).toString())
+	const token = await deploy("Celeste", {
+		from: deployer,
+		args: [INITIAL_SUPPLY, INITIAL_FEE],
+		// we need to wait if on a live network so we can verify properly
+		waitConfirmations: network.config.blockConfirmations || 5,
+	})
+	log(`Celeste deployed at ${token.address}`)
 
-	const Token = await ethers.getContractFactory("MyToken")
-	const token = await Token.deploy()
+	await console.log("Token address:", token.address)
 
-	console.log("Token address:", token.address)
+	if (!developmentChains.includes(network.name) && process.env.ETHERSCAN_API_KEY) {
+		await verify(token.address, [INITIAL_SUPPLY, INITIAL_FEE])
+	}
 }
 
 main()
