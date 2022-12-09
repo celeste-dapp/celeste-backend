@@ -3,7 +3,16 @@ pragma solidity ^0.8.4;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
+error Celeste__NotOwner();
+
 contract Celeste is ERC20 {
+	modifier onlyOwner() {
+		if (msg.sender != i_owner) {
+			revert Celeste__NotOwner();
+		}
+		_;
+	}
+
 	address payable immutable i_owner;
 	uint256 public s_fee;
 
@@ -25,7 +34,7 @@ contract Celeste is ERC20 {
 		return true;
 	}
 
-	function setFee(uint256 fee) public {
+	function setFee(uint256 fee) public onlyOwner {
 		s_fee = fee;
 	}
 
