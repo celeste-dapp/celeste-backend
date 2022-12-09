@@ -5,7 +5,6 @@ const verify = async (contractAddress, args) => {
 	try {
 		await run("verify:verify", {
 			address: contractAddress,
-			constructorArguments: args,
 			contract: "contracts/CelesteToken.sol:Celeste",
 		})
 	} catch (e) {

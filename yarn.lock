@@ -786,7 +786,7 @@
   "resolved" "https://registry.npmjs.org/hardhat-deploy-ethers/-/hardhat-deploy-ethers-0.3.0-beta.13.tgz"
   "version" "0.3.0-beta.13"
 
-"@nomiclabs/hardhat-etherscan@^3.1.3":
+"@nomiclabs/hardhat-etherscan@^3.1.0", "@nomiclabs/hardhat-etherscan@^3.1.3":
   "integrity" "sha512-UeNO97j0lwOHqX7mrH6SfQQBdXq1Ng6eFr7uJKuQOrq2UVTWGD70lE5QO4fAFVPz9ao+xlNpMyIqSR7+OaDR+Q=="
   "resolved" "https://registry.npmjs.org/@nomiclabs/hardhat-etherscan/-/hardhat-etherscan-3.1.3.tgz"
   "version" "3.1.3"
@@ -810,10 +810,38 @@
     "@types/sinon-chai" "^3.2.3"
     "@types/web3" "1.0.19"
 
+"@openzeppelin/contracts-upgradeable@^4.8.0":
+  "integrity" "sha512-5GeFgqMiDlqGT8EdORadp1ntGF0qzWZLmEY7Wbp/yVhN7/B3NNzCxujuI77ktlyG81N3CUZP8cZe3ZAQ/cW10w=="
+  "resolved" "https://registry.npmjs.org/@openzeppelin/contracts-upgradeable/-/contracts-upgradeable-4.8.0.tgz"
+  "version" "4.8.0"
+
 "@openzeppelin/contracts@^4.8.0":
   "integrity" "sha512-AGuwhRRL+NaKx73WKRNzeCxOCOCxpaqF+kp8TJ89QzAipSwZy/NoflkWaL9bywXFRhIzXt8j38sfF7KBKCPWLw=="
   "resolved" "https://registry.npmjs.org/@openzeppelin/contracts/-/contracts-4.8.0.tgz"
   "version" "4.8.0"
+
+"@openzeppelin/hardhat-upgrades@^1.21.0":
+  "integrity" "sha512-Kwl7IN0Hlhj4HluMTTl0DrtU90OI/Q6rG3sAyd2pv3fababe9EuZqs9DydOlkWM45JwTzC+eBzX3TgHsqI13eA=="
+  "resolved" "https://registry.npmjs.org/@openzeppelin/hardhat-upgrades/-/hardhat-upgrades-1.21.0.tgz"
+  "version" "1.21.0"
+  dependencies:
+    "@openzeppelin/upgrades-core" "^1.20.0"
+    "chalk" "^4.1.0"
+    "debug" "^4.1.1"
+    "proper-lockfile" "^4.1.1"
+
+"@openzeppelin/upgrades-core@^1.20.0":
+  "integrity" "sha512-Wp4uUov9/8cY0H4xHYsGCkLh0EItrpusSdQPWOTI1Q/YDDfu4uTH3LYyTeVAavzEvkAuKCCuTOPnZBibLZGxSw=="
+  "resolved" "https://registry.npmjs.org/@openzeppelin/upgrades-core/-/upgrades-core-1.20.5.tgz"
+  "version" "1.20.5"
+  dependencies:
+    "cbor" "^8.0.0"
+    "chalk" "^4.1.0"
+    "compare-versions" "^5.0.0"
+    "debug" "^4.1.1"
+    "ethereumjs-util" "^7.0.3"
+    "proper-lockfile" "^4.1.1"
+    "solidity-ast" "^0.4.15"
 
 "@resolver-engine/core@^0.3.3":
   "integrity" "sha512-eB8nEbKDJJBi5p5SrvrvILn4a0h42bKtbCTri3ZxCGt6UvoQyp7HnGOfki944bUjBSHKK3RvgfViHn+kqdXtnQ=="
@@ -2329,7 +2357,7 @@
   "resolved" "https://registry.npmjs.org/catering/-/catering-2.1.1.tgz"
   "version" "2.1.1"
 
-"cbor@^8.1.0":
+"cbor@^8.0.0", "cbor@^8.1.0":
   "integrity" "sha512-DwGjNW9omn6EwP70aXsn7FQJx5kO12tX0bZkaTjzdVFM6/7nhA4t0EENocKGx6D2Bch9PE2KzCUf5SceBdeijg=="
   "resolved" "https://registry.npmjs.org/cbor/-/cbor-8.1.0.tgz"
   "version" "8.1.0"
@@ -2607,6 +2635,11 @@
   "integrity" "sha512-Gar0ASD4BDyKC4hl4DwHqDrmvjoxWKZigVnAbn5H1owvm4CxCPdb0HQDehwNYMJpla5+M2tPmPARzhtYuwpHow=="
   "resolved" "https://registry.npmjs.org/commander/-/commander-3.0.2.tgz"
   "version" "3.0.2"
+
+"compare-versions@^5.0.0":
+  "integrity" "sha512-v8Au3l0b+Nwkp4G142JcgJFh1/TUhdxut7wzD1Nq1dyp5oa3tXaqb03EXOAB6jS4gMlalkjAUPZBMiAfKUixHQ=="
+  "resolved" "https://registry.npmjs.org/compare-versions/-/compare-versions-5.0.1.tgz"
+  "version" "5.0.1"
 
 "component-emitter@^1.2.1":
   "version" "1.3.0"
@@ -3604,7 +3637,7 @@
     "ethjs-util" "0.1.6"
     "rlp" "^2.2.4"
 
-"ethereumjs-util@^7.1.0":
+"ethereumjs-util@^7.0.3", "ethereumjs-util@^7.1.0":
   "integrity" "sha512-SDl5kKrQAudFBUe5OJM9Ac6WmMyYmXX/6sTmLZ3ffG2eY6ZIGBes3pEDxNN6V72WyOw4CPD5RomKdsa8DAAwLg=="
   "resolved" "https://registry.npmjs.org/ethereumjs-util/-/ethereumjs-util-7.1.5.tgz"
   "version" "7.1.5"
@@ -3707,7 +3740,7 @@
     "uuid" "2.0.1"
     "xmlhttprequest" "1.8.0"
 
-"ethers@^5.0.0", "ethers@^5.0.1", "ethers@^5.0.2", "ethers@^5.5.2", "ethers@^5.5.3", "ethers@^5.7.2", "ethers@~5.7.0":
+"ethers@^5.0.0", "ethers@^5.0.1", "ethers@^5.0.2", "ethers@^5.0.5", "ethers@^5.5.2", "ethers@^5.5.3", "ethers@^5.7.2", "ethers@~5.7.0":
   "integrity" "sha512-wswUsmWo1aOK8rR7DIKiWSw9DbLWe6x98Jrn8wcTflTVvaXhAMaB5zGAXy0GYQEQp9iO1iSHWVyARQm11zUtyg=="
   "resolved" "https://registry.npmjs.org/ethers/-/ethers-5.7.2.tgz"
   "version" "5.7.2"
@@ -4385,7 +4418,7 @@
     "to-readable-stream" "^1.0.0"
     "url-parse-lax" "^3.0.0"
 
-"graceful-fs@^4.1.11", "graceful-fs@^4.1.2", "graceful-fs@^4.1.6", "graceful-fs@^4.1.9", "graceful-fs@^4.2.0":
+"graceful-fs@^4.1.11", "graceful-fs@^4.1.2", "graceful-fs@^4.1.6", "graceful-fs@^4.1.9", "graceful-fs@^4.2.0", "graceful-fs@^4.2.4":
   "integrity" "sha512-9ByhssR2fPVsNZj478qUUbKfmL0+t5BDVyjShtyZZLiK7ZDAArFFfopyOTj0M05wE2tJPisA4iTnnXl2YoPvOA=="
   "resolved" "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.10.tgz"
   "version" "4.2.10"
@@ -6602,6 +6635,15 @@
   dependencies:
     "asap" "~2.0.6"
 
+"proper-lockfile@^4.1.1":
+  "integrity" "sha512-TjNPblN4BwAWMXU8s9AEz4JmQxnD1NNL7bNOY/AKUzyamc379FWASUhc/K1pL2noVb+XmZKLL68cjzLsiOAMaA=="
+  "resolved" "https://registry.npmjs.org/proper-lockfile/-/proper-lockfile-4.1.2.tgz"
+  "version" "4.1.2"
+  dependencies:
+    "graceful-fs" "^4.2.4"
+    "retry" "^0.12.0"
+    "signal-exit" "^3.0.2"
+
 "proxy-addr@~2.0.5":
   "version" "2.0.6"
   dependencies:
@@ -7017,6 +7059,11 @@
 "ret@~0.1.10":
   "version" "0.1.15"
 
+"retry@^0.12.0":
+  "integrity" "sha512-9LkiTwjUh6rT555DtE9rTX+BKByPfrMzEAtnlEtdEwr3Nkffwiihqe2bWADg+OQRjt9gl6ICdmB/ZFDCGAtSow=="
+  "resolved" "https://registry.npmjs.org/retry/-/retry-0.12.0.tgz"
+  "version" "0.12.0"
+
 "reusify@^1.0.4":
   "integrity" "sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw=="
   "resolved" "https://registry.npmjs.org/reusify/-/reusify-1.0.4.tgz"
@@ -7311,6 +7358,11 @@
     "get-intrinsic" "^1.0.2"
     "object-inspect" "^1.9.0"
 
+"signal-exit@^3.0.2":
+  "integrity" "sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ=="
+  "resolved" "https://registry.npmjs.org/signal-exit/-/signal-exit-3.0.7.tgz"
+  "version" "3.0.7"
+
 "simple-concat@^1.0.0":
   "version" "1.0.1"
 
@@ -7406,6 +7458,11 @@
     "require-from-string" "^2.0.0"
     "semver" "^5.5.0"
     "tmp" "0.0.33"
+
+"solidity-ast@^0.4.15":
+  "integrity" "sha512-e7gT6g8l8M2rAzH648QA3/IihCNy/anFoWyChVD+T+zfX4FjXbT8AO2DB3wG1iEmIBib9/+vD+GvTElWWpdw+w=="
+  "resolved" "https://registry.npmjs.org/solidity-ast/-/solidity-ast-0.4.38.tgz"
+  "version" "0.4.38"
 
 "solidity-coverage@^0.8.2":
   "integrity" "sha512-cv2bWb7lOXPE9/SSleDO6czkFiMHgP4NXPj+iW9W7iEKLBk7Cj0AGBiNmGX3V1totl9wjPrT0gHmABZKZt65rQ=="
