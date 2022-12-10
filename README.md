@@ -61,10 +61,19 @@ function distributeValue(postAddress) private onlyOwner {
 }
 ```
 
-### CelesteToken
+### CelesteToken (Inherits from OpenZeppelin's ERC-20)
 
 ```solidity
-
+function transfer(address _to, uint256 _value)
+		public
+		override
+		returns (bool)
+	{
+    burn(msg.sender, (value * s_burn) / 100);
+		_transfer(msg.sender, owner(), (_value * s_fee) / 100);
+		_transfer(msg.sender, _to, (_value * (100 - s_fee - s_burn)) / 100);
+		return true;
+	}
 ```
 
 ### CelestePost
