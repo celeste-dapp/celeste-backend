@@ -90,5 +90,31 @@ function transfer(address _to, uint256 _value) public override returns (bool) {
 ### CelesteStake
 
 ```solidity
-//TBD
+struct Staker {
+  tokenIds;
+  tokenStakingCoolDown;
+  balance;
+  rewardsReleased;
+}
+
+mapping(address => Staker) public stakers;
+mapping(uint256 => address) public tokenOwner;
+bool public tokensClaimable;
+bool initialised;
+
+function stake(tokenId) public {
+  _stake(msg.sender, tokenId)
+}
+
+function stakeBatch(tokenIds) public {
+  for (i = 0; i < tokenIds.length; i++) {
+    _stake(msg.sender), tokenIds[i]);
+  }
+}
+
+function _stake(user, tokenId) {
+  require(initialized);
+  require(nft.ownerOf(_tokenId) == user);
+  Staker staker = stakers[user]
+}
 ```
