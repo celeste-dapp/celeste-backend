@@ -50,6 +50,10 @@ contract CelestePost is
 		return super.supportsInterface(interfaceId);
 	}
 
+	function getPostScore() public view returns (uint256) {}
+
+	function getTotalPostScore() public view returns (uint256) {}
+
 	function getVersion() public pure returns (uint256) {
 		return 1;
 	}
